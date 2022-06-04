@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script>
+        function calc()
+{
+    var D = "";
+    var A = document.getElementById("num1").value;
+    var B = document.getElementById("op").value;
+    var C = document.getElementById("num2").value;
+    if(B === "+")
+    {
+        D = parseInt(A)+parseInt(C);
+    }
+    else if(B === "-")
+    {
+        D = parseInt(A)-parseInt(C);
+    }
+    else if(B === "*")
+    {
+        D = parseInt(A)*parseInt(C);
+    }
+    else if(B === "/")
+    {
+        D = parseInt(A)/parseInt(C);
+    }
+    document.getElementById("result").innerHTML ="Result :  "+ D;
+}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Calculator</h1>
+        <div class="row">
+            <div class="col 12">
+                <div class="row d-flex justify-content-center">
+                    <input type="text" id="num1" name="num1" placeholder="Enter Num 1" class="form-control mt-3"/>
+                   
+                   
+                    <input type="text" id="op" name="op" placeholder="Enter + OR - OR * OR /" class="form-control mt-3"/>
+                    
+                    <input type="text" id="num2" name="num2" placeholder="Enter Num 2" class="form-control mt-3"/>
+                    
+                </div>
+
+            </div>
+            <input type="button" class="btn btn-primary mt-3" value="Calc" onclick="calc()" />
+        
+            <p class="text-center mt-3" id="result" name="r1">
+                <br />
+            </p>
+           
+        </div>
+        
+    </div>
+    
+  
+</body>
+</html>
